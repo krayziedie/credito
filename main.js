@@ -9,14 +9,20 @@ $.ajax({
 	dataType:'json',
 	})
 .done(function(data){
+	var prestamo_clp = data.uf.valor * monto;
+	var interes = cuotas * 0.015;
+	var valor_total = prestamo_clp+prestamo_clp*interes;
 	var html='<div class="conversion">';
-	html += '<p>valor de la cuota '+(monto / cuotas) / data.uf.valor+'</p>';
+	html += '<h3>valor total del prestamo $ '+ parseInt(prestamo_clp)+'</h3>';
+	html += '<h3>valor total a pagar $ '+ parseInt(valor_total)+'</h3>';
+	html += '<h3>valor cuota $ '+ parseInt(valor_total / cuotas)+'</h3>';
 	//html += '<p>UF: '+monto / data.uf.valor+'</p>';
 	//html += '<p>US$: '+monto / data.dolar.valor+'</p>';
 	html += '</div>';
 	//console.log(data);
 	//console.log(textStatus);
-	$conv.append(html);
+	$conv.html(html);
+
 	})
 .fail(function(err) {
 	console.log(errorThrown, textStatus);

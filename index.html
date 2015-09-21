@@ -5,20 +5,40 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>AJAX</title>
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	
-	<link rel="stylesheet" href="main.css">
-</head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
 <body>
-	<h1 class="titulo">Simule su crédito</h1>
-	<h2>Ingrese su monto:</h2>
-	<input type="text" id="monto" placeholder = "Monto en $" >
-	<h2>Ingrese cantidad de cuotas:</h2>
-	<input type="text" id="cuotas" placeholder = "n° de cuotas" >
-	<button id="btn">OK</button>
-	<div class="conversion">
-		<!-- <p>UF:</p>
-		<p>Dolar:</p> -->
+<div class="container">
+<div class="jumbotron">
+  <h1>Simula tu credito</h1>
+</div>
+</div>
+<div class="container">
+<div class="row">
+	<div class="col-md-4">
+		<h2>Ingrese su monto:</h2>
+		<input type="text" id="monto" placeholder = "Monto en UF" >
 	</div>
+	<div class="col-md-4">
+		<h2>Ingrese cantidad de cuotas:</h2>
+		<input type="text" id="cuotas" placeholder = "n° de cuotas" >
+		<button id="btn">OK</button>
+	</div>
+	<div class="col-md-4">
+		<div class="conversion">
+			<!-- <p>UF:</p>
+			<p>Dolar:</p> -->
+		</div>
+	</div>		
+</div>		
+</div>
 	<script src="main.js"></script>
 </body>
 </html>
